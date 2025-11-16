@@ -11,7 +11,7 @@ Este projeto foi desenvolvido por **Rian Reis Neiva** e **Victor Santos** para a
 ## 📁 Estrutura do projeto
 
 estoque/
-│
+|
 ├── src/
 │   ├── main.c
 │   ├── estoque.c
