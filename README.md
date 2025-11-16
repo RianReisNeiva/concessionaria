@@ -31,7 +31,7 @@ estoque/
 - Salvar e carregar dados automaticamente
 
 ## ▶ Como compilar
-- Para rodar o projeto apos realizar uma alteração, é necessário rodar o comando:"gcc src/main.c src/arquivo.c src/estoque.c -I include -o app.exe"
+- gcc src/main.c src/arquivo.c src/estoque.c -I include -o app.exe
 
 ## ▶ Como executar
--Para rodar o projeto utilize o comando: ".\app.exe"
+- .\app.exe
