@@ -3,9 +3,9 @@ typedef struct{
     int ano;
     int velocidade;
     float preco;
-    char cor;
-    char modelo;
-    char marca;
+    char cor[20];
+    char modelo[50];
+    char marca[50];
 } Carro;
 
 // Lista todos os carros cadastrados
