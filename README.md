@@ -9,6 +9,7 @@ Este projeto foi desenvolvido por **Rian Reis Neiva** e **Victor Santos** para a
 - Armazenamento em arquivo TXT
 
 ## 📁 Estrutura do projeto
+
 estoque/
 │
 ├── src/
