@@ -1,14 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "estoque.h"
+#include <locale.h>
+#include "../includes/estoque.h"
 
 #define MAX 100
 
 int main() {
+    setlocale(LC_ALL, "Portuguese");
     Carro carros[MAX];
     int total = 0;
-
     int opcao;
+    int id;
 
     do {
         printf("\n=== SISTEMA DE ESTOQUE DE CARROS ===\n");
@@ -16,40 +18,44 @@ int main() {
         printf("2 - Listar carros\n");
         printf("3 - Atualizar carro\n");
         printf("4 - Remover carro\n");
-        printf("5 - Ver carro\n");
+        printf("5 - Ver carro especifico\n");
         printf("0 - Sair\n");
 
         printf("Escolha: ");
         scanf("%d", &opcao);
-        getchar(); 
 
         switch (opcao) {
+
             case 1:
                 cadastrarCarro(carros, &total);
                 break;
+
             case 2:
                 listarCarros(carros, total);
                 break;
+
             case 3:
-                int id;
-                printf("\nInforme o id\n");
-                scanf("%d", id);
+                printf("\nInforme o ID: ");
+                scanf("%d", &id);
                 atualizarCarro(carros, total, id);
                 break;
+
             case 4:
-                int id;
-                printf("\nInforme o id\n");
-                scanf("%d", id);
+                printf("\nInforme o ID: ");
+                scanf("%d", &id);
                 deletarCarro(carros, &total, id);
                 break;
+
             case 5:
-                int id;
-                printf("\nInforme o id\n");
-                scanf("%d", id);
+                printf("\nInforme o ID: ");
+                scanf("%d", &id);
                 buscarCarroPorId(carros, total, id);
+                break;
+
             case 0:
                 printf("Saindo...\n");
                 break;
+
             default:
                 printf("Opção inválida!\n");
         }

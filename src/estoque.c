@@ -17,7 +17,7 @@ void listarCarros(Carro carros[], int total) {
         printf("Cor: %s\n", carros[i].cor);
         printf("Ano: %d\n", carros[i].ano);
         printf("Velocidade: %d km/h\n", carros[i].velocidade);
-        printf("Preço: R$ %.2f\n", carros[i].preco);
+        printf("Preco: R$ %.2f\n", carros[i].preco);
         printf("-----------------------------\n");
     }
 }
@@ -64,7 +64,7 @@ void atualizarCarro(Carro carros[], int total, int id) {
     printf("Carro atualizado com sucesso!\n");
 }
 
-void deletarCarro(Carro carros[], int total, int id) {
+void deletarCarro(Carro carros[], int *total, int id) {
     int pos = buscarCarroPorId(carros, total, id);
 
     if (pos == -1) {
@@ -83,8 +83,7 @@ void cadastrarCarro(Carro carros[], int *total) {
 
     Carro novo;
 
-    printf("ID do carro: ");
-    scanf("%d", &novo.id);
+   novo.id = *total + 11;
 
     printf("Modelo: ");
     scanf("%s", novo.modelo);
@@ -101,7 +100,7 @@ void cadastrarCarro(Carro carros[], int *total) {
     printf("Velocidade: ");
     scanf("%d", &novo.velocidade);
 
-    printf("Preço: ");
+    printf("Preco: ");
     scanf("%f", &novo.preco);
 
     carros[*total] = novo;
