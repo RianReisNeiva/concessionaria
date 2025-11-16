@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include "estoque.h"
+#include "../includes/estoque.h"
 
 void listarCarros(Carro carros[], int total) {
     if (total == 0) {
