@@ -1,7 +1,7 @@
 #include <stdio.h>
-
+#include "../includes/arquivo.h"
 int main(){
-    printf("Hello, Wold");
+   imprimir();
     
     return 0;
 }
