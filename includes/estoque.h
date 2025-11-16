@@ -1,0 +1,9 @@
+typedef struct{
+    int id;
+    int ano;
+    int velocidade;
+    float preco;
+    char cor;
+    char modelo;
+    char marca;
+} Carro;
