@@ -1,6 +1,6 @@
 # Sistema de Estoque de Carros (C)
 
-Este projeto foi desenvolvido por **Rian Reis Neiva** e um colega para aprender Git, modularização em C e desenvolvimento colaborativo.
+Este projeto foi desenvolvido por **Rian Reis Neiva** e **Victor Santos** para aprender Git, modularização em C e desenvolvimento colaborativo.
 
 ## 🧰 Tecnologias usadas
 - Linguagem C
