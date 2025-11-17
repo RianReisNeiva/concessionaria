@@ -43,7 +43,11 @@ int main() {
             case 4:
                 printf("\nInforme o ID: ");
                 scanf("%d", &id);
-                deletarCarro(carros, &total, id);
+                if(deletarCarro(carros, &total, id)){
+                    printf("Carro removido com sucesso\n");
+                }else{
+                    printf("carro não encontrado\n");
+                }
                 break;
 
             case 5:
