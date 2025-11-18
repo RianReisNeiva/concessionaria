@@ -50,7 +50,7 @@ int atualizarCarro(Carro carros[], int total, int id)
     int pos = 0;
     for(int i = 0; i < total; i++){
         if(carros[i].id == id){
-            pos = 1;
+            pos = i;
         }else{
             return 0;
         }
