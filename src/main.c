@@ -37,7 +37,11 @@ int main() {
             case 3:
                 printf("\nInforme o ID: ");
                 scanf("%d", &id);
-                atualizarCarro(carros, total, id);
+                if(atualizarCarro(carros, total, id)){
+                    printf("Carro atualizado com sucesso!\n");
+                }else{
+                    printf("Carro não encontrado");
+                }
                 break;
 
             case 4:
@@ -53,7 +57,10 @@ int main() {
             case 5:
                 printf("\nInforme o ID: ");
                 scanf("%d", &id);
-                buscarCarroPorId(carros, total, id);
+                if(!buscarCarroPorId(carros, total, id)){
+                    printf("carro não encontrado\n");
+                    return;
+                }
                 break;
 
             case 0:
