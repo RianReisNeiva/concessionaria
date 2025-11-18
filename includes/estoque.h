@@ -10,6 +10,6 @@ typedef struct{
 
 void listarCarros(Carro carros[], int total);
 int buscarCarroPorId(Carro carros[], int total, int id);
-void atualizarCarro(Carro carros[], int total, int id);
+int atualizarCarro(Carro carros[], int total, int id);
 int deletarCarro(Carro carros[], int *total, int id);
 void cadastrarCarro(Carro carros[], int *total);
