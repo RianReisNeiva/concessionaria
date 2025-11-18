@@ -45,14 +45,14 @@ int buscarCarroPorId(Carro carros[], int total, int id)
     return 0;
 }
 
-int atualizarCarro(Carro carros[], int total, int id)
-{
-    int pos = 0;
+void atualizarCarro(Carro carros[], int total, int id){
+    int pos;
     for(int i = 0; i < total; i++){
         if(carros[i].id == id){
             pos = i;
-        }else{
-            return 0;
+        }
+        if(i == total && carros[i].id != id){
+            printf("Carro não encontrado, tente novamente\n");
         }
     }
     printf("Atualizando carro ID %d:\n", id);
@@ -74,22 +74,27 @@ int atualizarCarro(Carro carros[], int total, int id)
 
     printf("Novo preço: ");
     scanf("%f", &carros[pos].preco);
-    return 1;
+    printf("\nCarro atualizado com sucesso\n");
 }
 
 int deletarCarro(Carro carros[], int *total, int id)
 {
-    for (int i = 0; i < total; i++)
+    for (int i = 0; i < *total; i++)
     {
         if (carros[i].id == id)
         {
-            carros[i] = carros[100 + 1];
+            for (int j = i; j < *total - 1; j++)
+            {
+                carros[j] = carros[j + 1];
+            }
+
             (*total)--;
             return 1;
         }
     }
     return 0;
 }
+
 
 void cadastrarCarro(Carro carros[], int *total)
 {

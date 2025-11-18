@@ -37,15 +37,11 @@ int main() {
             case 3:
                 printf("\nInforme o ID: ");
                 scanf("%d", &id);
-                if(atualizarCarro(carros, total, id)){
-                    printf("Carro atualizado com sucesso!\n");
-                }else{
-                    printf("Carro não encontrado");
-                }
+                atualizarCarro(carros, total, id);
                 break;
 
             case 4:
-                printf("\nInforme o ID: ");
+                printf("\nInforme o ID:\n");
                 scanf("%d", &id);
                 if(deletarCarro(carros, &total, id)){
                     printf("Carro removido com sucesso\n");
