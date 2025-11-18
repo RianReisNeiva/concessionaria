@@ -79,17 +79,22 @@ void atualizarCarro(Carro carros[], int total, int id){
 
 int deletarCarro(Carro carros[], int *total, int id)
 {
-    for (int i = 0; i < total; i++)
+    for (int i = 0; i < *total; i++)
     {
         if (carros[i].id == id)
         {
-            carros[i] = carros[100 + 1];
+            for (int j = i; j < *total - 1; j++)
+            {
+                carros[j] = carros[j + 1];
+            }
+
             (*total)--;
             return 1;
         }
     }
     return 0;
 }
+
 
 void cadastrarCarro(Carro carros[], int *total)
 {
